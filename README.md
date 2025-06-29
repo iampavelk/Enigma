@@ -38,3 +38,32 @@ is_message=$(check_message "$string")
 Objectives
 Start the program with the welcoming message Enter a message:
 Read a string from the standard input and check whether it's correct. The string can contain uppercase letters and space. If everything is right, output This is a valid message! Otherwise — This is not a valid message!
+
+Stage 2:ASCII converter
+
+Description
+Let's create a basic cipher to encrypt a letter with a key. This stage includes the following steps:
+
+Ask for an uppercase letter Enter an uppercase letter:
+Read a letter from the standard input;
+Ask for a key Enter a key: The key should be a number between 0 and 9;
+Read the key from the standard input;
+If everything is correct:
+Calculate the encrypted letter (shift the letter to the right by the key value)
+Output the encrypted letter with Encrypted letter: %letter%
+Otherwise, output Invalid key or letter!
+You can get the ASCII value of a character with the code snippet below. Feel free to use any method:
+
+letter="A"
+ord() {
+  value=$(printf "%d\n" "'$letter")
+}
+
+You can also get the ASCII character of a value with the code snippet below. Feel free to use any method:
+
+value="65"
+chr() {
+  char=$(printf "%b\n" "$(printf "\\%03o" "$value")")
+}
+
+To find an encrypted letter, convert a letter to a number, add the key, and convert the number to the letter again. Remember, once you reach Z continue with A.
