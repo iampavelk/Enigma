@@ -67,3 +67,25 @@ chr() {
 }
 
 To find an encrypted letter, convert a letter to a number, add the key, and convert the number to the letter again. Remember, once you reach Z continue with A.
+
+Stage 3 Caesar cipher
+
+Description
+You've learned how to encrypt a letter. It's time to work on a message. Create the Caesar Cipher to encrypt and decrypt a message where the key is a constant value — 3.
+
+Objectives
+Let's break the task into several steps:
+
+Ask for a command:
+Type 'e' to encrypt, 'd' to decrypt a message:
+Enter a command:
+
+Read the command from the standard input;
+Check whether the command is valid. Otherwise, output Invalid command!;
+Ask for a message;
+Check whether the message has the correct format. A message can contain uppercase letters and spaces.
+If the command is e, encrypt all letters by shifting them three times to the right. A will become D. Keep spaces as they are.
+Output the encrypted message with the header Encrypted message:
+If the command is d, decrypt the letters by shifting them up three times to the left. D will be A. Keep spaces as they are.
+Output the decrypted message with the header Decrypted message:
+Otherwise, output This is not a valid message!
